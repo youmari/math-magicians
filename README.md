@@ -14,14 +14,14 @@
 ## Getting Started
 ## To run the website locally follow the following steps:
 
-### Setup
-- clone the project to your local machine
-### Install
-- in the root directory run the command to install the dependencies :
+### Clone the project to your local machine
+    git clone git@github.com:youmari/math-magicians.git
+### Move to the root directory 
+    cd math-magicians
+### Install dependencies
     npm install
-
-### Usage
-    in the root directory run the command " npm start " to see the website in the browser
+### Open the website in the browser
+    npm start
     
 
 👤 **Youmari**
