@@ -1,44 +1,32 @@
-import React, { Component } from 'react';
+import { useState } from 'react';
 import calculate from '../logic/calculate';
 import Buttons from './Buttons';
 
-// eslint-disable-next-line react/prefer-stateless-function
-class Calculator extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      numbersAndSymbolys: {
-        total: '',
-        next: '',
-        operation: '',
-      },
-    };
+const Calculator = () => {
+  
+  const [calculation, setCalculation] = useState({
+    total: '',
+    next: '',
+    operation: '',
+  });
 
-    this.handleOnClick = this.handleOnClick.bind(this);
-  }
+  const { total, next, operation } = calculation;
 
-  handleOnClick(e) {
-    const { numbersAndSymbolys } = this.state;
-    this.setState({
-      numbersAndSymbolys: calculate(numbersAndSymbolys, e.target.textContent),
-    });
-  }
-
-  render() {
-    const { numbersAndSymbolys: { next, total, operation } } = this.state;
-    return (
-      <div className="calculator-grid">
-        <div className="calculator-output">
-          {total}
-          {' '}
-          {operation}
-          {' '}
-          {next}
-        </div>
-        <Buttons onclick={this.handleOnClick} />
+  const handleOnClick = (e) => {
+    setCalculation((prevState) => calculate(prevState, e.target.textContent));
+  };
+  return (
+    <div className="calculator-grid">
+      <div className="calculator-output">
+        {total}
+        {' '}
+        {operation}
+        {' '}
+        {next}
       </div>
-    );
-  }
-}
+      <Buttons onclick={handleOnClick} />
+    </div>
+  );
+};
 
 export default Calculator;
