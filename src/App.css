@@ -20,7 +20,7 @@
 
 .calculator-output {
   grid-column: span 4;
-  padding: 1rem ;
+  padding: 1rem;
   font-size: 30px;
   background-color: #858694;
   color: #fff;
