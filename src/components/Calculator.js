@@ -3,7 +3,6 @@ import calculate from '../logic/calculate';
 import Buttons from './Buttons';
 
 const Calculator = () => {
-  
   const [calculation, setCalculation] = useState({
     total: '',
     next: '',
