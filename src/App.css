@@ -6,7 +6,6 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   width: 300px;
-  height: 250px;
   background-color: #eee;
 }
 
@@ -16,14 +15,16 @@
   align-items: center;
   border: 1px solid #d6d6d6;
   cursor: pointer;
+  height: 50px;
 }
 
 .calculator-output {
   grid-column: span 4;
-  padding: 0.7rem;
-  font-size: 20px;
+  padding: 1rem;
+  font-size: 30px;
   background-color: #858694;
   color: #fff;
+  height: 30px;
 }
 
 .btn-0 {

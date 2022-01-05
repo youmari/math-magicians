@@ -1,30 +1,41 @@
 import React, { Component } from 'react';
+import calculate from '../logic/calculate';
+import Buttons from './Buttons';
 
 // eslint-disable-next-line react/prefer-stateless-function
 class Calculator extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      numbersAndSymbolys: {
+        total: '',
+        next: '',
+        operation: '',
+      },
+    };
+
+    this.handleOnClick = this.handleOnClick.bind(this);
+  }
+
+  handleOnClick(e) {
+    const { numbersAndSymbolys } = this.state;
+    this.setState({
+      numbersAndSymbolys: calculate(numbersAndSymbolys, e.target.textContent),
+    });
+  }
+
   render() {
+    const { numbersAndSymbolys: { next, total, operation } } = this.state;
     return (
       <div className="calculator-grid">
-        <div className="calculator-output" />
-        <span className="calculator-btn">AC</span>
-        <span className="calculator-btn">+/-</span>
-        <span className="calculator-btn">%</span>
-        <span className="calculator-btn btn-div">/</span>
-        <span className="calculator-btn">7</span>
-        <span className="calculator-btn">8</span>
-        <span className="calculator-btn">9</span>
-        <span className="calculator-btn btn-x">x</span>
-        <span className="calculator-btn">4</span>
-        <span className="calculator-btn">5</span>
-        <span className="calculator-btn">6</span>
-        <span className="calculator-btn btn--">-</span>
-        <span className="calculator-btn">1</span>
-        <span className="calculator-btn">2</span>
-        <span className="calculator-btn">3</span>
-        <span className="calculator-btn btn-add">+</span>
-        <span className="calculator-btn btn-0">0</span>
-        <span className="calculator-btn">.</span>
-        <span className="calculator-btn btn-equal">=</span>
+        <div className="calculator-output">
+          {total}
+          {' '}
+          {operation}
+          {' '}
+          {next}
+        </div>
+        <Buttons onclick={this.handleOnClick} />
       </div>
     );
   }
