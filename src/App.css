@@ -27,14 +27,10 @@
   height: 30px;
 }
 
-.btn-0 {
+.zero {
   grid-column: span 2;
 }
 
-.btn-div,
-.btn-x,
-.btn--,
-.btn-add,
-.btn-equal {
+.orange {
   background-color: #f5913e;
 }
