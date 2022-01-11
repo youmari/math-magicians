@@ -42,6 +42,10 @@ header {
   margin-bottom: 1em;
 }
 
+header h1 {
+  margin-left: 2%;
+}
+
 nav ul {
   display: flex;
   justify-content: center;
@@ -51,4 +55,25 @@ nav ul {
 nav ul li {
   list-style-type: none;
   padding: 1rem;
+}
+
+.link {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #000;
+}
+
+.link:hover {
+  text-decoration: underline #f5913e;
+}
+
+.home-title {
+  padding: 1rem;
+  font-size: 2rem;
+}
+
+.lorem {
+  font-size: 1.3rem;
+  padding-top: 1rem;
+  margin: 0 2rem;
 }
