@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should contain p element  1`] = `
+<h2
+  class="home-title"
+>
+  Welcome to our page
+</h2>
+`;
