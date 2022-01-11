@@ -7,6 +7,8 @@
   grid-template-columns: repeat(4, 1fr);
   width: 300px;
   background-color: #eee;
+  margin-top: 5rem;
+  margin-right: 3%;
 }
 
 .calculator-btn {
@@ -76,4 +78,14 @@ nav ul li {
   font-size: 1.3rem;
   padding-top: 1rem;
   margin: 0 2rem;
+}
+
+.cal {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cal h2 {
+  padding: 1rem;
+  
 }
