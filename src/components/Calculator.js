@@ -15,15 +15,18 @@ const Calculator = () => {
     setCalculation((prevState) => calculate(prevState, e.target.textContent));
   };
   return (
-    <div className="calculator-grid">
-      <div className="calculator-output">
-        {total}
-        {' '}
-        {operation}
-        {' '}
-        {next}
+    <div className="cal">
+      <h2>Let&apos;s do some math!</h2>
+      <div className="calculator-grid">
+        <div className="calculator-output">
+          {total}
+          {' '}
+          {operation}
+          {' '}
+          {next}
+        </div>
+        <Buttons onclick={handleOnClick} />
       </div>
-      <Buttons onclick={handleOnClick} />
     </div>
   );
 };
