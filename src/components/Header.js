@@ -6,13 +6,19 @@ const Header = () => (
     <nav>
       <ul>
         <li>
-          <Link to="/">Home</Link>
+          <Link className="link" to="/">
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="/calculator">Calculator</Link>
+          <Link className="link" to="/calculator">
+            Calculator
+          </Link>
         </li>
         <li>
-          <Link to="/">Quote</Link>
+          <Link className="link" to="/quote">
+            Quote
+          </Link>
         </li>
       </ul>
     </nav>
