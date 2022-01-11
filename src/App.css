@@ -34,3 +34,21 @@
 .orange {
   background-color: #f5913e;
 }
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul li {
+  list-style-type: none;
+  padding: 1rem;
+}
