@@ -1,18 +1,16 @@
-import { render } from "@testing-library/react";
-import { BrowserRouter } from "react-router-dom";
-import "@testing-library/jest-dom";
-import Header from "../Header";
-
+import { render } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+import '@testing-library/jest-dom';
+import Header from '../Header';
 
 describe('Header tests', () => {
   test('should render', () => {
     const header = render(
       <BrowserRouter>
         <Header />
-      </BrowserRouter>
-    )
+      </BrowserRouter>,
+    );
 
     expect(header).toMatchSnapshot();
-  })
-  
+  });
 });
