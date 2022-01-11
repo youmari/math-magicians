@@ -18,7 +18,7 @@ const Calculator = () => {
     <div className="cal">
       <h2>Let&apos;s do some math!</h2>
       <div className="calculator-grid">
-        <div className="calculator-output">
+        <div data-testid="total" className="calculator-output">
           {total}
           {' '}
           {operation}
