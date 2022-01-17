@@ -1,6 +1,9 @@
 # math-magicians
 > Interactive web app where you can use a normal calculation and read geek mathimaticians  qutoes
 
+## Live demo
+ [live on Netlify](https://youmari-math-magicians.netlify.app/)<br>
+ [live on Heroku](https://youmari-math-magicians.herokuapp.com/)
 
 ## Built With
 
